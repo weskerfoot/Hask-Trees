@@ -43,13 +43,4 @@ nextPowerOf n = 2 ^ (ceiling $ logBase 2 $ fromIntegral n)
 padHashes xs = pad' 0 xs where
     pad' n ([]) = [] ++ (take ((nextPowerOf n) - n) $ repeat BL.empty)
     pad' n (x:xs) = x : (pad' (n +1) xs)
-
-main :: IO ()
-main = do
-  contents <- BL.readFile "Mover.hs"
-  contents2 <- BL.readFile "TooFull.hs"
-  contents3 <- BL.readFile "Candidates.hs"
-  contents4 <- BL.readFile "Helpers.hs"
-  let test = [contents, contents2, contents3, contents4, contents, contents, contents,contents]
-  print $ buildTree test
   
