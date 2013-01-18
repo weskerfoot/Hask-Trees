@@ -1,11 +1,9 @@
 module HashTrees where
 
 import Data.Digest.Pure.SHA
-import Data.List
 import qualified Data.ByteString.Lazy as BL
 import Control.Monad
 import Data.List
-import Data.Bits
 
 data HashTree k a = Leaf | HashTree (Digest k) (HashTree k a) (HashTree k a) deriving (Show)
 
