@@ -1,1 +1,1 @@
-This is not suitable for use in mission critical programs. May be security vulnerabilities and/or other bugs. Use at your own risk.
+A simple experiment with a hash tree implemention in Haskell. I may turn this into an actual library at some point!
